@@ -1,0 +1,42 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/changda?zeroDateTimeBehavior=convertToNull</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+		
+		<!-- SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property>
+
+		<!-- Disable the second-level cache  -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hbm2ddl.auto">update</property>
+
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.ProxoolConnectionProvider</property>
+		<property name="hibernate.proxool.xml">proxool.xml</property>
+		<property name="hibernate.proxool.pool_alias">mysql</property>
+		
+		<property name="show_sql">false</property>
+
+		<mapping class="com.changda.model.User" />
+		<mapping class="com.changda.model.Member" />
+		<mapping class="com.changda.model.News" />
+		<mapping class="com.changda.model.Category" />
+		<mapping class="com.changda.model.Job" />
+		<mapping class="com.changda.model.Feedback" />
+		<mapping class="com.changda.model.Product" />
+		<mapping class="com.changda.model.Cases" />
+		
+	</session-factory>
+</hibernate-configuration>

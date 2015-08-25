@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs>
+	<job jobCode="100" class="com.znznhome.module.timer.job.ConfigRefreshJob"/>
+</jobs>

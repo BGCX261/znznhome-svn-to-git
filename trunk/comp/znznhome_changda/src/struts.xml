@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="UTF-8"></constant>
+	
+    <package name="admin" namespace="/admin" extends="struts-default" >
+   		<!-- 
+   		<action name="index">
+   			<result>/admin/index.html</result>
+   		</action>
+   		 -->
+   		 
+       <action name="*-add" class="com.changda.action.{1}Action" method="add">
+       		<result name="success">/admin/result/add-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="*-delete" class="com.changda.action.{1}Action" method="delete">
+       		<result name="success">/admin/result/delete-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="*-modify" class="com.changda.action.{1}Action" method="modify">
+       		<result name="success">/admin/result/modify-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="User-login" class="com.changda.action.UserAction" method="login">
+       		<result>/admin/index.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="User-logout" class="com.changda.action.UserAction" method="logout">
+       		<result>/admin/login.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="News-createHomePage" class="com.changda.action.NewsAction" method="createHomePage">
+       		<result name="success">/admin/result/createhomepage-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="News-printNews" class="com.changda.action.NewsAction" method="printNews">
+       		<result name="success">/admin/result/print-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       		<result name="notemplate">/admin/result/notemplate.jsp</result>
+       		<result name="nofilename">/admin/result/nofilename.jsp</result>
+       </action>
+       
+       <action name="News-updateMultipleNews" class="com.changda.action.NewsAction" method="updateMultipleNews">
+       		<result name="success">/admin/result/updatemultiplenews-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       		<result name="noselected">/admin/result/noselected.jsp</result>
+       </action>
+       
+      <action name="News-deleteMultipleNews" class="com.changda.action.NewsAction" method="deleteMultipleNews">
+       		<result name="success">/admin/result/success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       		<result name="noselected">/admin/result/noselected.jsp</result>
+       </action>
+       
+       <action name="User-changepassword" class="com.changda.action.UserAction" method="changepassword">
+       		<result>/admin/result/changepassword-success.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+       
+       <action name="*-*" class="com.changda.action.{1}Action" method="{2}">
+       		<result>/admin/{1}/{1}-{2}.jsp</result>
+       		<result name="error">/admin/result/error.jsp</result>
+       </action>
+    </package>
+    
+    <package name="front" namespace="/" extends="struts-default" >
+
+       <action name="index">
+   			<result>/index.jsp</result>
+   	   </action>
+   	   
+       <action name="*-*" class="com.changda.action.{1}Action" method="{2}">
+       		<result>/success.jsp</result>
+       		<result name="error">/fail.jsp</result>
+       </action>
+       
+       <action name="News-list" class="com.changda.action.NewsAction" method="list">
+       		<result>/news_list.jsp</result>
+       		<result name="error">/fail.jsp</result>
+       </action>
+       
+       <action name="Product-list" class="com.changda.action.ProductAction" method="list">
+       		<result>/product_list.jsp</result>
+       		<result name="error">/fail.jsp</result>
+       </action>
+       
+       <action name="Cases-list" class="com.changda.action.CasesAction" method="list">
+       		<result>/cases_list.jsp</result>
+       		<result name="error">/fail.jsp</result>
+       </action>
+       
+       <action name="Job-list" class="com.changda.action.JobAction" method="list">
+       		<result>/hr_list.jsp</result>
+       		<result name="error">/fail.jsp</result>
+       </action>
+       
+       <action name="Member-login" class="com.changda.action.MemberAction" method="login">
+       		<result>/index.jsp</result>
+       		<result name="error">/fail.jsp</result>
+       </action>
+    </package>
+     
+</struts>

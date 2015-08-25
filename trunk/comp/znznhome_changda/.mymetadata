@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="znznhome_changda"
+  id="myeclipse.1292225507250"
+  context-root="/changda"
+  j2ee-spec="5.0"
+  archive="znznhome_changda.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

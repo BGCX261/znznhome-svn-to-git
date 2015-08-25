@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>tree.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/tree/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/tree/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="js/tree/jquery.jstree.js"></script>
+	<link type="text/css" rel="stylesheet" href="skin/tree/syntax/!style.css"/>
+	<link type="text/css" rel="stylesheet" href="skin/tree/!style.css"/>
+	<script type="text/javascript" src="skin/tree/syntax/!script.js"></script>
+    <link  rel="stylesheet" type="text/css" href="skin/tree/themes/default/style.css">
+
+  </head>
+  
+  <body>
+<div id="mmenu" style="height:30px; overflow:auto;">
+<input type="button" id="create" value="add folder" style="display:block; float:left;"/>
+<input type="button" id="remove" value="remove" style="display:block; float:left;"/>
+<input type="text" id="text" value="" style="display:block; float:right;" />
+</div>    
+    <!-- the tree container (notice NOT an UL node) -->
+<div id="demo" class="jstree-default" style="height:200px;"></div>
+
+<!-- JavaScript neccessary for the tree -->
+
+<script type="text/javascript" class="source below">
+$(function () {
+$("#demo").jstree({ 
+		// List of active plugins
+		"plugins" : [ 
+			"themes","json_data","ui","crrm","cookies","contextmenu" 
+		],
+
+		// I usually configure the plugin that handles the data first
+		// This example uses JSON as it is most common
+		"json_data" : { 
+			// This tree is ajax enabled - as this is most common, and maybe a bit more complex
+			// All the options are almost the same as jQuery's AJAX (read the docs)
+			"ajax" : {
+				// the URL to fetch the data
+				"url" : "ajax/myFavorite-load",
+				// the `data` function is executed in the instance's scope
+				// the parameter is the node being loaded 
+				// (may be -1, 0, or undefined when loading the root nodes)
+				"data" : function (n) { 
+					// the result is fed to the AJAX request `data` option
+					return { 
+						"operation" : "get_children", 
+						"id" : n.attr ? n.attr("id").replace("node_","") : 1 ,
+						"mbid":"1"
+					}; 
+				}
+			}
+		}
+	}).bind("create.jstree", function (e, data) {
+		alert(data.rslt.name);
+		$.post(
+			"ajax/myFavorite-add", 
+			{title : data.rslt.name, position : data.rslt.position, pid : data.rslt.parent.attr("id"), memberid : 12345}, 
+				
+			function (r) {
+				alert(r);
+			}
+		);
+	});
+
+});
+</script>
+<script type="text/javascript" class="source below">
+// Code for the menu buttons
+$(function () { 
+	$("#mmenu input").click(function () {
+		switch(this.id) {
+			case "create":
+				$("#demo").jstree("create",null,"last", {"attr": {id : "test"}, title:"Test"}); 
+				break;
+			default:
+				$("#demo").jstree(this.id);
+				break;
+		}
+	});
+});
+</script>
+    
+  </body>
+</html>

@@ -1,0 +1,16 @@
+.znzn_descr {
+	width: 300px;
+	border: 1px solid #d9d9d9;
+	background: #daeaf3;
+	position: absolute;
+	z-index: 9;
+	padding: 6px;
+	line-height: 17px;
+	text-align: left;
+	top: 1520px;
+	color: #575757;
+}
+
+.znzn_disable {
+	display: none;
+}

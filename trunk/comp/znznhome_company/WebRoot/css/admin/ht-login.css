@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+body{background-color:#eeeff3; background-image:url(../../images/admin/dlbg.png); background-repeat:repeat-x;margin:0px; padding:0px;line-height:12px text-align:center; overflow-x: hidden;}
+form,p,h4,ul,input,select {margin:0px; padding:0px;}
+body,div,td {font-size:12px; font-family:"宋体", "Times New Roman", Times, serif;}
+img,a img{border:0; margin:0; padding:0;}
+input,select {font-size:12px; vertical-align:absmiddle;}
+input {padding-top:1px; cursor:pointer;}
+a{ color:#265191; text-decoration:none;}
+a:hover{ color:#ff6000; text-decoration:underline;}
+ul{ list-style:none; text-align:left; line-height:20px;}
+/* 清除浮动 */
+.clearfloat{ clear:both; height:0; font-size: 0px; line-height: 0px;}
+
+/* 首页头部开始 */
+.content{background:url(../../images/admin/nrbg.jpg) no-repeat center top; width:969px; margin:0 auto; height:1000px;}
+.content .dlcon{ margin:0 auto; padding-top:284px; width:510px; height:159px;}
+.content .dlcon .dltable{ width:222px; height:97px; margin-right:39px;_margin-right:20px;  float:right;}
+.content .dlcon .dltable tr td{ height:32px; line-height:32px;}
+.content .dlcon .dltable .input1{ width:168px;}
+.content .dlcon .dltable .input2{ width:10px; vertical-align:middle; margin-right:5px;}
+.content .dlcon .dltable .btn{background:url(../../images/admin/dlbt.png) no-repeat; width:49px; height:24px; border:none; margin-left:5px;}
+.content .dlcon .bqsm{ padding-top:52px; width:498px; margin:0 auto; text-align:center;}
+.content .dlcon .bqsm span{padding-right: 2px; font-family: Georgia, "Times New Roman", Times, serif;}

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档-Download by http://www.jb51.net</title>
+</head>
+
+<body>
+<div id="login">
+	<form name="form1" action="admin/member-login" method="post">
+	<input type="hidden" name="oldurl" id="oldurl" value=""/>
+	<input type="hidden" name="loginFrom" value="front"/>
+	<script type="text/javascript">
+		fillUrl("oldurl");
+		//document.getElementById("oldurl").value=document.URL;
+		//alert("debug");
+	</script>
+	<div id="title">登录后进入自己的宅男宅女主页，自己的站自己做主。</div>
+    <div style="width:320px;height:80px;margin:0px auto;">
+    	
+        <table id="loginbox" border="0" cellpadding="0" cellspacing="0">
+            <tr style="height:30px">
+                <td class="bfont">用户名：</td>
+                <td><input class="txtbox" type="text" name="name" /></td>
+            </tr>
+            <tr>
+                <td class="bfont">密&nbsp;&nbsp;码：</td>
+                <td><input class="txtbox" type="password" name="password" /></td>
+            </tr>
+        </table>
+        <div id="btnlogin"><a href="#" onclick="javascript:document.form1.submit();"><img src="images/login.gif" width="55" height="55" /></a></div>
+    </div>
+    <div id="forget">
+    	<span style="float:left;"><a href="#">忘记密码？</a></span>
+        <span style="float:right;"><a href="#">注册？</a></span>
+    </div>
+    
+   </form>
+</div>
+</body>
+</html>

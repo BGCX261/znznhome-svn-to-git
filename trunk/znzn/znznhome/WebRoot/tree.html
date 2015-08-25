@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>tree.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/tree/jquery.cookie.js"></script>
+	<script type="text/javascript" src="js/tree/jquery.hotkeys.js"></script>
+	<script type="text/javascript" src="js/tree/jquery.jstree.js"></script>
+	<link type="text/css" rel="stylesheet" href="skin/tree/syntax/!style.css"/>
+	<link type="text/css" rel="stylesheet" href="skin/tree/!style.css"/>
+	<script type="text/javascript" src="skin/tree/syntax/!script.js"></script>
+    <script type="text/javascript">
+    	function ajax_() {
+    		$.post('ajax/ajax-demo',{a:1,b:2}, function(d) {alert(d);});
+    		alert('--');
+    	}
+    	function _callBackFun(data){
+    		alert(data);
+    	}
+    </script>
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link  rel="stylesheet" type="text/css" href="skin/tree/themes/default/style.css">
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+    <input type="button" name="ajax" value="ajax" onclick="ajax_();"/>
+
+
+
+<p>Here is a PHP &amp; mySQL enabled demo. You can use the classes/DB structure included, but those are not thoroughly tested and not officially a part of jstree. In the log window you can also see all function calls as they happen on the instance.</p>
+<div id="mmenu" style="height:30px; overflow:auto;">
+<input type="button" id="create" value="add folder" style="display:block; float:left;"/>
+<input type="button" id="create2" value="add file" style="display:block; float:left;"/>
+<input type="button" id="rename" value="rename" style="display:block; float:left;"/>
+<input type="button" id="remove" value="remove" style="display:block; float:left;"/>
+<input type="button" id="cut" value="cut" style="display:block; float:left;"/>
+<input type="button" id="copy" value="copy" style="display:block; float:left;"/>
+<input type="button" id="paste" value="paste" style="display:block; float:left;"/>
+<input type="button" id="clear_search" value="clear" style="display:block; float:right;"/>
+<input type="button" id="search" value="search" style="display:block; float:right;"/>
+<input type="text" id="text" value="" style="display:block; float:right;" />
+</div>    
+    <!-- the tree container (notice NOT an UL node) -->
+<div id="demo" class="jstree-default" style="height:200px;"></div>
+<div style="height:30px; text-align:center;">
+	<input type="button" style='width:170px; height:24px; margin:5px auto;' value="reconstruct" onclick="$.get('./server.php?reconstruct', function () { $('#demo').jstree('refresh',-1); });" />
+	<input type="button" style='width:170px; height:24px; margin:5px auto;' id="analyze" value="analyze" onclick="$('#alog').load('./server.php?analyze');" />
+	<input type="button" style='width:170px; height:24px; margin:5px auto;' value="refresh" onclick="$('#demo').jstree('refresh',-1);" />
+</div>
+<div id='alog' style="border:1px solid gray; padding:5px; height:450px; margin-top:15px; overflow:auto; font-family:Monospace;"></div>
+<div id='alog2' style="border:1px solid gray; padding:5px; height:800px; margin-top:15px; overflow:auto; font-family:Monospace;"></div>
+
+<!-- JavaScript neccessary for the tree -->
+
+
+<script type="text/javascript" class="source below">
+$(function () {
+//	$("#demo").load("ajax/ajax-demo",'',function(data){});
+$("#demo")
+	.bind("before.jstree", function (e, data) {
+		$("#alog").append(data.func + "<br />");
+	})
+	.jstree({ 
+		// List of active plugins
+		"plugins" : [ 
+			"themes","html_data","ui","crrm","cookies","dnd","search","types","hotkeys","contextmenu" 
+		],
+
+		// I usually configure the plugin that handles the data first
+		// This example uses JSON as it is most common
+		"html_data" : { 
+			// This tree is ajax enabled - as this is most common, and maybe a bit more complex
+			// All the options are almost the same as jQuery's AJAX (read the docs)
+			"ajax" : {
+				// the URL to fetch the data
+				"url" : "ajax/tree-load",
+				// the `data` function is executed in the instance's scope
+				// the parameter is the node being loaded 
+				// (may be -1, 0, or undefined when loading the root nodes)
+				"data" : function (n) { 
+					// the result is fed to the AJAX request `data` option
+					return { 
+						"operation" : "get_children", 
+						"id" : n.attr ? n.attr("id").replace("node_","") : 1 
+					}; 
+				}
+			}
+		}
+	}).bind("create.jstree", function (e, data) {
+		alert("this" + this);
+		for(var attr_ in this)
+		{
+			if(this[attr_] != null) {
+				//alert("this的"+attr_+"属性:"+this[attr_]);
+				$("#alog2").append("this的"+attr_+"属性:"+this[attr_] + "<br />");
+			}
+		     
+		}
+		for(var attr_ in this.children) {
+			$("#alog2").append("this.children的"+attr_+"属性:"+this.children[attr_] + "<br />");
+		}
+		for(var attr_ in this.childNodes) {
+			$("#alog2").append("this.childNodes的"+attr_+"属性:"+this.childNodes[attr_] + "<br />");
+		}
+		for(var attr_ in this.attributes) {
+			$("#alog2").append("this.attributes的"+attr_+"属性:"+this.attributes[attr_] + "<br />");
+		}
+		//data.id = this.id;
+		//data.name = this.name;
+		//alert("args length " + arguments.length);
+		//alert("pid " + data.rslt.parent.attr("id"));//ok
+		//alert("parent_id2 " + data.rslt.parent.attr("parent_id2"));
+		//alert("state " + data.rslt.parent.attr("state"));
+		//alert("position " + data.rslt.position);//ok
+		//alert("it id " + data.rslt.id);
+		//alert("it name " + data.rslt.name); //ok
+		//alert("it new_name " + data.rslt.new_name);
+		//alert("it title " + data.rslt.title);
+		//alert("it data.attr " + data.rslt.attr);
+		
+		//alert("data.is_selected " + data.is_selected());非法函数
+		//alert("debug");
+		
+		for(var attr_ in data)
+		{
+		    // alert("data的"+attr_+"属性:"+data[attr_]);
+		}
+		for(var attr2_ in data.rslt)
+		{
+		    // alert("data.rslt的"+attr2_+"属性:"+data.rslt[attr2_]);
+		}
+		for(var attr2_ in data.args)
+		{
+		   //  alert("data.args的"+attr2_+"属性:"+data.args[attr2_]);
+		}
+		
+		for(var attr2_ in data.args[2])
+		{
+		    // alert("data.args[2]的"+attr2_+"属性:"+data.args[2][attr2_]);
+		}
+		
+		$.post(
+			"ajax/tree-add", 
+			'', 
+			function (r) {
+			//	alert(r);
+			}
+		);
+	});
+
+});
+</script>
+<script type="text/javascript" class="source below">
+// Code for the menu buttons
+$(function () { 
+	$("#mmenu input").click(function () {
+		switch(this.id) {
+			case "create":
+			case "create2":
+				$("#demo").jstree("create",null,"last", {"attr": {id : "test"}, title:"Test"}); 
+				break;
+			default:
+				$("#demo").jstree(this.id);
+				break;
+
+		}
+	});
+});
+</script>
+    
+  </body>
+</html>

@@ -1,0 +1,185 @@
+http://www.lashou.com/?inviter=ibHhkODEw
+http://www.nuomi.com/i/aV3InZnpJ
+
+大智慧账号 gwi9699538258 密码 9249408
+
+
+拉手 返券：http://www.lashou.com/?inviter=ibHhkODEw
+lxd810  lxd810a  lxd810b lxd810c
+
+
+lxd810 拉手IPHONE抽奖号：2121728
+邀请抽奖的链接：http://www.lashou.com/?inviter=ibHhkODEw
+
+lxd810a 拉手IPHONE抽奖号：2121995 
+
+
+陈鸿账号密码：
+我的账号是：cherhom
+密码是：17887890
+全局密码：h1va9tjn
+
+
+TOMCAT目录： E:\vs\607562cherhom 网站目录： d:\site\7562_cherhom_141711\ROOT 
+全局用户名： cherhom 全局密码： h1va9tjn(只要是要用密码的，都是这个) 
+
+
+
+
+宅男宅女虚拟主机
+--------------备案------------------
+海淀区万寿寺甲27号八一剧场中国剧院4楼 
+现在要到现场备案，还要照相。
+010-88589600  周一到周五  没通过有原因的，改了再提交即可。
+
+--------------登录------------------
+http://www.javaidc.com/
+用户名：lxd810
+密码是：123...
+
+全局用户名：ext  
+全局密码：e5yw4aya
+
+FTP信息（tomcat 6.0 网站文件存放位置） 
+地址： admin.s20.javaidc.com 端口： 22  
+
+数据库信息（MySQL 5.0） 
+地址：admin.s20.javaidc.com 
+端口：3309  
+库名称：javaidc_ext 
+
+
+瑞尔虚拟主机
+http://www.rekq.net
+--------------登录------------------
+www.javaidc.com
+用户名：arrail
+密码是：arrail1234
+
+全局用户名： reck 
+全局密码： f6oq7loc(只要是要用密码的，都是这个) 
+
+FTP信息
+地址： admin.s20.javaidc.com 端口： 22  
+ 
+数据库信息（MySQL 5.0） 
+地址： admin.s20.javaidc.com 
+端口： 3309  
+库名称： javaidc_reck 
+
+测试域名： 
+http://2903.s20.javaidc.com
+
+域名解析地址：121.101.213.231
+
+
+瑞尔服务器
+--------------远程登录------------------
+119.254.65.67:2
+用户名：root 
+密码：qwe123!@#
+
+mysql用户密码：
+dental
+ad123456
+
+---------------------------------------
+
+
+
+鸿屹/医食/昌达：
+
+--------------网址------------------
+http://www.yishitongyuan.com/
+http://www.hongyikg.com/
+http://www.hongyibj.com
+
+
+-------------mysql 用户密码------------------
+用户：root
+密码：hy2011
+
+--------------远程登录------------------
+115.182.33.44:33800
+
+hongyikg
+
+jn2s5t48
+
+
+
+
+中景博升虚拟主机
+--------------------------------
+网址：http://cs.photo.xundee.com:8080
+www.bjzjbs.cn
+用的搜护的网址跳转技术
+
+-------------新站FTP--------------
+地址：124.42.127.253
+端口：21
+用户名：zj
+密码：zj@2010@11@22
+
+mysql数据库名：zjbs
+用户：zjbsmysql
+密码：db@2010@11@22 
+
+
+-------------老站FTP--------------
+地址：www.bjzjbs.com  不要使用pasv模式
+端口：21
+用户名：bjzjbs
+密码：bjzjbs20102010
+
+
+-----------------老站后台------------
+http://www.bjzjbs.com/manager/webmain.aspx
+用户名：zjbs 
+密码：13910198239
+
+
+瓦西里
+------------------------------
+北京联合创美科技发展有限公司网站在万网注册信息：
+会员ID：31331074
+密码：labona12345
+网址： www.labona.hk
+万网联系人：乔乔010-84268625
+
+我本人的联系方式：18611137501陈明升
+
+
+孔先生
+------------------------------
+我是在万网申请的域名 网址：http://www.net.cn/
+我的用户名是：13911310130
+密码是：502850126
+我购买的域名是：focuslink.cn
+
+qq企业邮箱:
+https://exmail.qq.com/
+用户名：mzxws
+密码：mzxws
+找回密码邮箱：我的qq邮箱
+
+
+
+源码下载
+------------------------------
+http://www.pudn.com/vip.asp
+
+账号：zhangbeijing
+
+密码： 12345678
+
+
+陈鸿团购后台
+-------------------------------
+www.dissss.cn 
+账号：cherhom 
+密码：17887890
+
+
+
+

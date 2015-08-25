@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="znznhome_company"
+  id="myeclipse.1288444125640"
+  context-root="/znznhome_company"
+  j2ee-spec="5.0"
+  archive="znznhome_company.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

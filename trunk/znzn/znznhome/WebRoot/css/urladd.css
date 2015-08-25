@@ -1,0 +1,13 @@
+	*{margin:0px;border:0px;padding:0px;}
+	a{color:#000;text-decoration:none;}
+	a:hover{color:#F30;text-decoration:underline;}
+	input{padding:0px;margin:0px;}
+	.znzn_txtbox{border:1px solid #E79F50;height:20px;line-height:22px;width:250px;}
+	.znzn_selectbox{border:1px solid #E79F50;height:20px;line-height:22px;width:252px;}
+	.znzn_areabox{border:1px solid #E79F50;height:100px;line-height:22px;width:250px;}
+	.znzn_bfont{font:700 12px "宋体"};
+	.znzn_urladd{width:500px;height:178px;margin:0px auto;}
+	.znzn_title{width:500px;height:25px;line-height:25px;color:#F60;font-weight:700;background-color:#FDEBD9;text-align:center;margin:0px auto;}
+	.znzn_urladdtable{width:500px; margin:10px 5px 0px 5px; display:block;}
+	.znzn_urladdtable tbody{width:500px; margin:10px 5px 0px 5px; display:block;}
+	.znzn_urladdtable tr td{text-align:left; padding:5px 0px 5px 0px;}

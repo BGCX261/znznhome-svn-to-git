@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-conf>
+	<params>
+		<param name="live" desc="前台输入的网址是否即时显示">1</param>
+		<param name="live2" desc="前台输入的网址是否即时显示">2</param>
+	</params>
+	<props>
+		<prop name="" desc="">
+		</prop>
+	</props>
+	<url-filter>
+		<field name="title" />
+		<field name="descr" />
+		<field name="origin" />
+	</url-filter>
+	<homepageMods discr="the modules desplay in homepage">
+		<module name="新闻" turn="99" />
+		<module name="影视" turn="90" />
+		<module name="软件" turn="65" />
+		<module name="小说" turn="95" />
+		<module name="网球" turn="80" />
+		<module name="摄影" turn="85" />
+		<module name="热帖" turn="75" />
+		<module name="自助游" turn="70" />
+	</homepageMods>
+	<newsMods discr="the modules desplay in news">
+		<module name="新闻" turn="1" />
+		<module name="热帖" turn="3" />
+		<module name="博文" turn="4" />
+		<module name="微博" turn="10" />
+	</newsMods>
+	<!--
+		<favorMods discr="the modules desplay in favorite"> <module name="软件"
+		turn="1" /> <module name="源码" turn="3" /> <module name="视频" turn="4"
+		/> <module name="小说" turn="10" /> </favorMods>
+	-->
+	<playersMods discr="the modules desplay in players">
+		<module name="游戏" turn="94" />
+		<module name="网球" turn="99" />
+		<module name="羽毛球" turn="99" />
+		<module name="桌球" turn="97" />
+		<module name="摄影" turn="98" />
+		<module name="滑雪" turn="96" />
+		<module name="游泳" turn="95" />
+		<module name="小吃" turn="93" />
+	</playersMods>
+	<videoMods discr="the modules desplay in video">
+		<module name="影视" turn="99" />
+		<module name="影评" turn="95" />
+		<module name="音乐" turn="90" />
+		<module name="Test" turn="90" />
+	</videoMods>
+	<opinionMods discr="the modules desplay in opinion">
+		<module name="热帖" turn="1" />
+
+	</opinionMods>
+	<coolSitesMods discr="the modules desplay in coolSites">
+		<module name="网络赚钱" turn="1" />
+	</coolSitesMods>
+	<downloadMods discr="the modules desplay in download">
+		<module name="软件" turn="1" />
+		<module name="源码" turn="3" />
+		<module name="视频" turn="4" />
+		<module name="小说" turn="10" />
+	</downloadMods>
+	<selfStudyMods discr="the modules desplay in selfStudy">
+		<module name="一般JavaScript" turn="84" />
+		<module name="JQuery" turn="83" />
+		<module name="YUI " turn="82" />
+		<module name="json" turn="81" />
+		<module name="一般Java" turn="999" />
+		<module name="性能" turn="99" />
+		<module name="多线程" turn="98" />
+		<module name="事务" turn="97" />
+		<module name="设计模式" turn="96" />
+		<module name="Jenkins" turn="95" />
+		<module name="TestNG" turn="94" />
+		<module name="HttpUnit" turn="93" />
+		<module name="Ant " turn="92" />
+		<module name="Maven" turn="91" />
+		<module name="Spring" turn="90" />
+		<module name="Struts2" turn="89" />
+		<module name="Hibernate" turn="88" />
+		<module name="Tomcat" turn="87" />
+		<module name="Eclipse" turn="86" />
+		<module name="算法" turn="85" />
+	</selfStudyMods>
+</web-conf>
